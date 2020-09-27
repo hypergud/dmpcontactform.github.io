@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./source/css/reset.css">
+    <link rel="stylesheet" href="./source/css/style.css">
+</head>
+<body>
+    <div class="container">  
+        <form id="contact" action="" method="post">
+          <h3>땡땡아파트<br>건의사항을 말씀해주세요.</h3>
+          <h4>답변은 엘리베이터에 게시됩니다.</h4>
+          <h5>카테고리 선택</h5>
+          
+          <fieldset style="display: inline-block;">
+            <label>호수 입력</label>
+            <input type="checkbox" tabindex="1" required autofocus>
+            <label for="radio">비공개</label>
+          </fieldset>
+          <fieldset>
+            <input placeholder="숫자를 기입해주세요" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <h5>건의사항 작성하기</h5>
+          <fieldset>
+            <input placeholder="제목(20자 이내)" type="email" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="내용 입력" type="tel" tabindex="3" required>
+            <input type="file" name="파일 첨부" id="">
+          </fieldset>
+          <fieldset style="display: inline-block;">
+            <label>답변 혼자 볼래요</label>
+            <input type="checkbox" tabindex="1" required autofocus>
+            <label for="radio">엘리베이터에서 볼게요.</label>
+          </fieldset>
+          <fieldset>
+            <input placeholder="연락처를 기입해주세요" type="text" tabindex="1" required autofocus>
+          </fieldset>
+        </form>
+      </div>
+</body>
+</html>
