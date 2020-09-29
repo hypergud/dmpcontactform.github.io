@@ -1,0 +1,198 @@
+body{
+    font-family: 'Noto Sans','Noto Sans KR',sans-serif;
+    color: #000;
+    overflow: hidden;
+    text-align: center;
+}
+
+.section{
+    overflow: hidden;
+}
+
+#section0 .layer0{
+    text-align: center;
+    position: fixed;
+    /* z-index: 10; */
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+
+    /*
+    * Preventing flicker on some browsers
+    * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+    */
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+#section0, #section1, #section3, #section4, #section5, #section6, #section7, #section8{
+    overflow: hidden;
+}
+
+
+/* 레이어 */
+
+.layer {
+    display: table;
+    width: 100%;
+    height: 100%
+}
+
+.layer .layer-container {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.layer .layer-area {
+    /* position: absolute; */
+    margin-right: auto;
+    margin-left: auto;
+    background-color: pink;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    /* width: 23.75vw;
+    height: 100vh; */
+    
+}
+.content::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.index + .content {
+    margin-top: 50px;
+}
+#complete{position: relative;}
+
+
+.page {box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    top:-72.9vh;
+    left: 0vw;
+    /* opacity: 0.5; */
+    width: 75vw;
+      height: 54.5vh;
+  }
+  
+  .page header {
+      width: 75vw;
+    height: 54.5vh;
+      overflow: hidden;
+    }
+    
+    .page img {
+    display: block;
+    width: 75vw;
+    height: 54.5vh;
+    object-fit: cover;
+  }
+  
+  /* // Hide the arrows at smaller width */
+  .glide__arrows {
+      display: none;
+    }
+    .glide__bullets{
+      /* transform: scale(1.4); */
+      transform: translateY(3vh) scale(1.3);
+      /* scale:1.4; */
+    }
+
+
+
+/* #bt_contact{position: absolute;top: 78.3vh;left: 65.7vh;width: 199px;} */
+#bt_contact{position: relative;top: -15.5vh;left: -0.25vh;width: 199px;}
+/* #bt_contact_answer{position: absolute;top: 78.3vh;left: 84vh;width: 199px;} */
+#bt_contact_answer{position: relative;top: -15.5vh;left: 0.45vh;width: 199px;}
+div#popup_qr{position:absolute;top:0vh;left:38.1vw;width: 23.75vw;height: 93.7vh;background-color: rgba(0, 0, 0, 0.5);z-index:300;display: none;}
+#popup_qr img{position: relative;top: 46vh; left: 0vw;width: 18.5vw;background-color: transparent;}
+
+div#popup_answer{position:absolute;top:0vh;left:38.1vw;width: 23.75vw;height: 93.7vh;background-color: rgba(0, 0, 0, 0.5);z-index:300;display: none;}
+#popup_answer img{position: relative;top: 22.6vh; left: 0.05vw;width: 20.8vw;background-color: transparent;}
+
+div#popup_qr #bt_qr_close{top:48.5vh; left:-34.5vw;width: 8vw;z-index: 50;position: relative;}
+div#popup_answer #bt_ans_close{top:48.5vh; left:-34.5vw;width: 8vw;z-index: 50;position: relative;}
+div#popup_answer #bt_ans_list{top:24vh; left:-33vw;width: 8vw;z-index: 50;position: relative;}
+
+div#popup_answer_con {position: absolute;top: 24vh; left: 16vw;width: 23.75vw;z-index: 350;display: none;}
+#popup_answer_con img{top: 0vh; left: 0vw;width: 20.8vw;background-color: transparent;}
+div#popup_answer_con #bt_ans_con_close{top:48.5vh; left:-34.5vw;width: 8vw;z-index: 50;position: relative;}
+
+/* carousel */
+
+
+
+
+
+/* 미디어쿼리 */
+
+
+/*---------------------------------------------------*/
+
+@media screen and (max-width: 1920px) and (orientation:landscape){
+    *{
+        /* background-color: green; */
+    }
+    .layer .layer-area {
+        width: 23.75vw;
+        height: 100vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #complete{width: 23.75vw;height:93.7vh;}
+    .page{top:-70.3vh;left: -0.02vw;width: 23.6vw;height: 52.3vh;opacity: 1;background-color: black;}
+    .page header {width: 23.8vw;height: 52.3vh;}
+    .page img {width: 23.8vw;height: 52.3vh;}
+    .glide__bullets{transform: translateY(3vh) scale(0.8);}
+
+    #bt_contact{top: -67.8vh;left: -0.1vh;width: 10.4vw;opacity: 1;height: 5.4vh;opacity: 1;}
+    #bt_contact_answer{top: -67.8vh;left: 0.4vh;width: 10.4vw;opacity: 1;height: 5.4vh;opacity: 1;}
+    div#popup_qr{top:0vh;left:38.1vw;width: 23.81vw;height: 100vh;}
+    #popup_qr img{top: 45.8vh; left: 1.35vw;width: 18.5vw;background-color: transparent;}
+    div#popup_answer{top:0vh;left:38.1vw;width: 23.81vw;height: 100vh;}
+    #popup_answer img{top: 23.7vh; left:0vw;width: 21vw;height:58.75vh;background-color: transparent;opacity: 1;}
+    div#popup_qr #bt_qr_close{top:45.5vh; left:-9.5vw;width: 2.2vw;}
+    div#popup_answer #bt_ans_close{top:19.8vh; left:-8vw;width: 2.5vw;height: 3.5vh;}
+    div#popup_answer #bt_ans_list{top:-22vh; left:1vw;width: 17vw;height: 2vh;}
+
+    div#popup_answer_con{top: 23.7vh; left:39.45vw;background-color: transparent;}
+    #popup_answer_con img{top: 0vh; left: -2vw;width: 21vw;height:58.75vh;background-color: transparent;opacity: 1;}
+    div#popup_answer_con #bt_ans_con_close{top:-0.3vh; left:-11.9vw;width: 2.5vw;height: 3.5vh;}
+}
+
+
+@media screen and (max-height: 1920px) and (orientation:portrait) {
+    *{
+        /* background-color: yellow; */
+    }
+
+    .layer .layer-area {
+        width: 75vw;
+        height: 100vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #complete{width: 75vw;height: 96.45vh;}
+    #bt_contact{top: -29.8vh;left: -0.35vh;width: 32.9vw;opacity: 0.5;}
+    #bt_contact{top: -70.4vh;left: -0.35vh;width: 32.95vw;opacity: 1;height: 5.5vh;}
+    #bt_contact_answer{top: -29.8vh;left: 0.45vh;width: 32.65vw;opacity: 0.5;}
+    #bt_contact_answer{top: -70.4vh;left: 0.47vh;width: 32.65vw;opacity: 1;height: 5.5vh;}
+    div#popup_qr{top:0vh;left:12.5vw;width: 75vw;height: 96.5vh;}
+    #popup_qr img{top: 47.1vh; left: 4.3vw;width: 58.5vw;background-color: transparent;}
+    div#popup_answer{top:0vh;left:12.5vw;width: 75vw;height: 96.5vh;}
+    #popup_answer img{top: 23vh; left:0vw;width: 66vw;background-color: transparent;}
+    div#popup_qr #bt_qr_close{top:47vh; left:-29.5vw;width: 8vw;}
+    div#popup_answer #bt_ans_close{top:18vh; left:-28vw;width: 8vw;}
+    div#popup_answer #bt_ans_list{top:-25vh; left:4vw;width: 55vw;}
+
+    div#popup_answer_con{top: 23vh; left:17vw;}
+    #popup_answer_con img{top: 0vh; left: -0.5vw;width: 66vw;background-color: transparent;}
+    div#popup_answer_con #bt_ans_con_close{top:-3.5vh; left:22vw;width: 8vw;}
+}
