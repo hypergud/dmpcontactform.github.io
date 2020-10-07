@@ -174,7 +174,6 @@ div#popup_answer_con #bt_ans_con_close{top:48.5vh; left:-34.5vw;width: 8vw;z-ind
     div#popup_answer_con #bt_ans_con_close{top:-2vh; left:-11.9vw;width: 2.5vw;height: 3.5vh;}
 }
 
-
 @media screen and (max-height: 1920px) and (orientation:portrait) {
     *{
         /* background-color: yellow; */
